@@ -1,7 +1,6 @@
 {
   "name": "saturn-backend",
   "version": "1.0.0",
-  "type": "module",
   "description": "Saturn backend server for AI signals and protected API routes",
   "main": "index.js",
   "scripts": {
