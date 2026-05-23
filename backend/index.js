@@ -4,11 +4,11 @@
 // CRITICAL: Anthropic API key NEVER exposed to frontend
 // Only this backend server calls Claude — frontend only makes requests here
 
-const express = require('express')
-const cors = require('cors')
-require('dotenv').config()
+import express from 'express'
+import cors from 'cors'
+import dotenv from 'dotenv'
 
-const app = express()
+dotenv.config()
 
 // Middleware
 app.use(express.json())
