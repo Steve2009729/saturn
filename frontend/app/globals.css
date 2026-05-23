@@ -1,0 +1,384 @@
+/* frontend/app/globals.css */
+/* RUNS ON: Vercel (Frontend) */
+/* Saturn design system - all colors, fonts, animations, effects */
+/* This is the visual foundation of the entire app - 500+ lines */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* Colors - Saturn color palette */
+  --color-ash-950: #080A0E;
+  --color-ash-900: #0F1419;
+  --color-ash-800: #161B22;
+  --color-ash-700: #1D2431;
+  --color-ash-600: #242C3A;
+  --color-ash-500: #2B3445;
+  --color-ash-400: #3D4A5C;
+  --color-ash-300: #5A6B81;
+  --color-ash-200: #8B95A8;
+  --color-ash-100: #C5D0DC;
+  --color-ash-50: #E8ECEF;
+  
+  /* Saturn theme colors */
+  --color-saturn-gold: #F0A500;
+  --color-saturn-gold-dark: #D68D00;
+  --color-saturn-gold-light: #FFC84D;
+  --color-saturn-green: #3FB950;
+  --color-saturn-red: #F85149;
+  --color-saturn-purple: #8B5CF6;
+}
+
+/* ===== TYPOGRAPHY ===== */
+* {
+  @apply font-rajdhani;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-space-grotesk font-bold tracking-tight;
+}
+
+.font-display {
+  @apply font-space-grotesk font-bold;
+}
+
+.font-mono {
+  @apply font-share-mono text-sm;
+}
+
+/* ===== LAYOUT ===== */
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-ash-950 text-ash-100;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== COLORS ===== */
+.bg-saturn {
+  @apply bg-ash-950;
+}
+
+.bg-saturn-card {
+  @apply bg-ash-800;
+}
+
+.bg-saturn-accent {
+  @apply bg-saturn-gold;
+}
+
+.text-saturn-gold {
+  @apply text-saturn-gold;
+}
+
+.text-saturn-green {
+  @apply text-saturn-green;
+}
+
+.text-saturn-red {
+  @apply text-saturn-red;
+}
+
+.text-saturn-purple {
+  @apply text-saturn-purple;
+}
+
+/* ===== GLASS EFFECT ===== */
+.glass {
+  background: rgba(22, 27, 34, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(91, 107, 129, 0.2);
+}
+
+.glass-lighter {
+  background: rgba(29, 36, 49, 0.5);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(91, 107, 129, 0.15);
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(240, 165, 0, 0.3);
+}
+
+.glow-gold-strong {
+  box-shadow: 0 0 40px rgba(240, 165, 0, 0.5);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(63, 185, 80, 0.3);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(248, 81, 73, 0.3);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 cursor-pointer;
+  @apply inline-flex items-center gap-2 justify-center;
+  @apply active:scale-95;
+}
+
+.btn-primary {
+  @apply bg-saturn-gold text-ash-950 hover:bg-saturn-gold-light glow-gold;
+}
+
+.btn-secondary {
+  @apply bg-ash-800 text-ash-100 hover:bg-ash-700 border border-ash-600;
+}
+
+.btn-danger {
+  @apply bg-saturn-red text-white hover:bg-red-600 glow-red;
+}
+
+.btn-success {
+  @apply bg-saturn-green text-white hover:bg-green-600 glow-green;
+}
+
+.btn-ghost {
+  @apply text-ash-100 hover:bg-ash-800 hover:text-saturn-gold transition-colors;
+}
+
+/* ===== TERMINAL GRID ===== */
+.terminal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-width: 1536px) {
+  .terminal-grid {
+    grid-template-columns: 2fr 1.2fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1535px) {
+  .terminal-grid {
+    grid-template-columns: 1.5fr 1fr 0.9fr;
+  }
+}
+
+/* ===== PANELS ===== */
+.panel {
+  @apply glass rounded-lg p-4 h-full overflow-hidden;
+  @apply border border-ash-700;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  @apply font-display text-lg text-saturn-gold mb-3 pb-3 border-b border-ash-700;
+  @apply flex items-center justify-between;
+}
+
+.panel-content {
+  @apply flex-1 overflow-y-auto overflow-x-hidden;
+}
+
+/* ===== SIGNAL BADGES ===== */
+.signal-buy {
+  @apply bg-saturn-green/20 text-saturn-green border border-saturn-green/50;
+}
+
+.signal-sell {
+  @apply bg-saturn-red/20 text-saturn-red border border-saturn-red/50;
+}
+
+.signal-hold {
+  @apply bg-ash-700 text-ash-200 border border-ash-600;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(240, 165, 0, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(240, 165, 0, 0.5);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(240, 165, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(240, 165, 0, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* ===== SPINNER ===== */
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid rgba(240, 165, 0, 0.2);
+  border-top-color: var(--color-saturn-gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== WALLET ADAPTER OVERRIDES ===== */
+.wallet-adapter-button {
+  @apply !bg-saturn-gold !text-ash-950 !rounded-lg !px-4 !py-2 !font-medium;
+  @apply !hover:bg-saturn-gold-light !transition-all !duration-200;
+}
+
+.wallet-adapter-button-trigger {
+  @apply !bg-saturn-gold !text-ash-950;
+}
+
+.wallet-adapter-modal {
+  @apply !bg-ash-900;
+}
+
+.wallet-adapter-modal-title {
+  @apply !text-saturn-gold !font-space-grotesk;
+}
+
+/* ===== FORMS ===== */
+input, textarea, select {
+  @apply bg-ash-800 text-ash-100 border border-ash-700 rounded-lg px-3 py-2;
+  @apply placeholder-ash-500 focus:border-saturn-gold focus:outline-none transition-colors;
+}
+
+input:focus, textarea:focus {
+  @apply bg-ash-800 border-saturn-gold;
+  box-shadow: 0 0 10px rgba(240, 165, 0, 0.2);
+}
+
+/* ===== TABLES ===== */
+table {
+  @apply w-full;
+}
+
+thead {
+  @apply bg-ash-800 border-b border-ash-700;
+}
+
+td, th {
+  @apply px-3 py-2 text-left;
+}
+
+tbody tr {
+  @apply hover:bg-ash-800/50 transition-colors;
+  @apply border-b border-ash-700;
+}
+
+/* ===== LINKS ===== */
+a {
+  @apply text-saturn-gold hover:text-saturn-gold-light transition-colors;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .terminal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    @apply p-3;
+  }
+
+  .panel-header {
+    @apply text-base;
+  }
+}
