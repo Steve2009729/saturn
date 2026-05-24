@@ -16,11 +16,8 @@ import { WalletModalProvider } from '@solana/wallet-adapter-react-ui'
 import {
   PhantomWalletAdapter,
   SolflareWalletAdapter,
-  BackpackWalletAdapter,
   TrustWalletAdapter,
-  CoinbaseWalletAdapter
 } from '@solana/wallet-adapter-wallets'
-import '@solana/wallet-adapter-react-ui/styles.css'
 
 const HELIUS_RPC = process.env.NEXT_PUBLIC_HELIUS_RPC_URL!
 
