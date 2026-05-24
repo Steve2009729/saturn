@@ -1,7 +1,7 @@
 // frontend/providers/WalletProvider.tsx
 // RUNS ON: Vercel (Frontend)
 // PURPOSE: Wraps entire app with Solana wallet adapter
-// Allows users to connect Phantom, Solflare, Backpack, Trust Wallet, Coinbase
+// Allows users to connect Phantom, Solflare,Trust Wallet
 // MUST be inside QueryProvider wrapper
 // Auto-reconnects to last used wallet on page refresh
 
