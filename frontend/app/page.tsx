@@ -5,7 +5,7 @@
 
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { useQuery } from '@tanstack/react-query'
 import { fetchMultiplePrices } from '@/lib/jupiter'
