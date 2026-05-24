@@ -24,14 +24,11 @@ const HELIUS_RPC = process.env.NEXT_PUBLIC_HELIUS_RPC_URL!
 export function WalletProvider({ children }: { children: React.ReactNode }) {
   const endpoint = useMemo(() => HELIUS_RPC, [])
 
-  const wallets = useMemo(
-    () => [
-      new PhantomWalletAdapter(),
-      new SolflareWalletAdapter(),
-      new BackpackWalletAdapter(),
-      new TrustWalletAdapter(),
-      new CoinbaseWalletAdapter(),
-    ],
+  const wallets = useMemo(() => [
+  new PhantomWalletAdapter(),
+  new SolflareWalletAdapter(),
+  new TrustWalletAdapter(),
+], [network])
     []
   )
 
