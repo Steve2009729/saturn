@@ -51,7 +51,7 @@ export function ActivityFeed({ token }: { token: TokenMarketData | null }) {
           </div>
         ) : (
           <div className="space-y-1">
-            {trades.map((trade, idx) => {
+            trades.map(trade: any, idx: number) => {
               const isBuy = trade.txType === 'buy'
               const amount = parseFloat(trade.tokenAmount) || 0
               const price = parseFloat(trade.tokenPrice) || 0
