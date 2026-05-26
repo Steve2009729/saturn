@@ -29,7 +29,6 @@ export function WalletProvider({ children }: { children: React.ReactNode }) {
   new SolflareWalletAdapter(),
   new TrustWalletAdapter(),
 ], [network])
-    []
   )
 
   return (
