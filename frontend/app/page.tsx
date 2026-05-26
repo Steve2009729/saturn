@@ -10,8 +10,7 @@ import { useQuery } from '@tanstack/react-query'
 import { fetchMultiplePrices } from '@/lib/jupiter'
 import { TOKENS, SITE_NAME, SITE_DESCRIPTION, FOOTER_TEXT } from '@/lib/constants'
 import { 
-  TrendingUp, 
-  Activity, 
+  TrendingUp,  
   Brain, 
   Zap, 
   BarChart3, 
