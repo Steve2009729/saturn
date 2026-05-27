@@ -72,7 +72,7 @@ export function ChartPanel({ token }: { token: TokenMarketData | null }) {
           .sort((a: any, b: any) => a.time - b.time)
 
 if (candleData.length > 0) {
-  candleSeries.setData(candleData)
+  candleSeries.setData(candleData as any)
   chart.timeScale().fitContent()
 }
 } catch (error) {
