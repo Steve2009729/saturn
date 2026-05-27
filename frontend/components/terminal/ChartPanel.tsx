@@ -69,18 +69,18 @@ export function ChartPanel({ token }: { token: TokenMarketData | null }) {
             close: parseFloat(item.c),
             volume: parseFloat(item.v),
           }))
-          .sort((a, b) => a.time - b.time)
+          .sort((a: any, b: any) => a.time - b.time)
 
-        if (candleData.length > 0) {
-          candleSeries.setData(candleData)
-          chart.timeScale().fitContent()
-        }
-      } catch (error) {
-        console.error('[Chart] Failed to fetch data:', error)
-      } finally {
-        setIsLoading(false)
-      }
-    }
+if (candleData.length > 0) {
+  candleSeries.setData(candleData)
+  chart.timeScale().fitContent()
+}
+} catch (error) {
+  console.error('[Chart] Failed to fetch data:', error)
+} finally {
+  setIsLoading(false)
+}
+}
 
     fetchData()
 
