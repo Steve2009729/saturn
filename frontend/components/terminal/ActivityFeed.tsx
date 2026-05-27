@@ -51,7 +51,7 @@ export function ActivityFeed({ token }: { token: TokenMarketData | null }) {
           </div>
         ) : (
           <div className="space-y-1">
-            trades.map(trade: any, idx: number) => {
+            {trades.map((trade: any, idx: number) => {
               const isBuy = trade.txType === 'buy'
               const amount = parseFloat(trade.tokenAmount) || 0
               const price = parseFloat(trade.tokenPrice) || 0
@@ -76,16 +76,21 @@ export function ActivityFeed({ token }: { token: TokenMarketData | null }) {
                         </div>
                       )}
                     </div>
+
                     <div className="font-mono text-ash-100">
                       {formatPrice(value)}
                     </div>
                   </div>
+
                   <div className="flex justify-between text-ash-400">
                     <span className="font-mono">
                       {shortenAddress(trade.user || 'Unknown')}
                     </span>
+
                     <span className="font-mono">
-                      {new Date(trade.blockUnixTime * 1000).toLocaleTimeString()}
+                      {new Date(
+                        trade.blockUnixTime * 1000
+                      ).toLocaleTimeString()}
                     </span>
                   </div>
                 </div>
