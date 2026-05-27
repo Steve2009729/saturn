@@ -8,7 +8,7 @@
 import { useState } from 'react'
 import { useWallet } from '@solana/wallet-adapter-react'
 import { useQuery, useMutation } from '@tanstack/react-query'
-import { getSwapQuote, buildSwapTransaction, toSmallestUnit, formatPrice, formatChange } from '@/lib/jupiter'
+import { getSwapQuote, buildSwapTransaction, toSmallestUnit, formatChange } from '@/lib/jupiter'
 import { TOKENS } from '@/lib/constants'
 import type { TokenMarketData, SwapQuote } from '@/types'
 import { ArrowDownUp, Zap } from 'lucide-react'
