@@ -29,7 +29,7 @@ export function TokenFeed({
   // Filter tokens based on selected type
   const filteredTokens = allTokens
     .filter(token => {
-      const change = parseFloat(token.priceChange.h24) || 0
+      const change = token.priceChange.h24 || 0
       if (filterType === 'gainers') return change > 0
       if (filterType === 'losers') return change < 0
       return true
